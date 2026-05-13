@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/clinical-state-infrastructure/clinical-state-annotation/annotation_schema/schema.json",
+  "title": "Clinical state annotation (Level 0 — no surface, no span)",
+  "description": "Per-annotation record for clinical state representation. Designed to be ontology-linkable and re-identification-safe.",
+  "type": "object",
+  "required": ["ord", "hpo_id", "category", "presence", "tier", "review_status"],
+  "properties": {
+    "ord": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Stable ordinal within a case (NOT a span position)"
+    },
+    "hpo_id": {
+      "type": "string",
+      "pattern": "^(HP:[0-9]{7}|-)$",
+      "description": "HPO identifier (e.g., HP:0001945) or '-' if not assigned"
+    },
+    "hpo_label": {
+      "type": ["string", "null"],
+      "description": "Optional human-readable HPO label"
+    },
+    "category": {
+      "type": "string",
+      "description": "Clinical section / category. Free-text vocabulary controlled by project convention.",
+      "examples": ["症例", "主訴", "現病歴", "既往歴", "家族歴", "現症", "検査所見", "病理検査", "経過", "diagnosis", "treatment", "other"]
+    },
+    "subcategory": {
+      "type": ["string", "null"]
+    },
+    "presence": {
+      "type": "string",
+      "enum": ["+", "-", "?", "u"],
+      "description": "+ present, - absent (negated), ? uncertain, u unspecified"
+    },
+    "tier": {
+      "type": "string",
+      "enum": ["AUTO-OK", "REVIEW", "FLAG"],
+      "description": "Quality tier. v0.1.0 = machine self-evaluation only."
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "iteration": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "RLM iteration at which this annotation was added (0 = initial extract)"
+    },
+    "review_status": {
+      "type": "string",
+      "enum": ["machine_only", "human_approved", "human_edited", "human_rejected", "needs_review"],
+      "description": "Review state. v0.1.0 = all 'machine_only'."
+    },
+    "reviewer_role": {
+      "type": ["string", "null"],
+      "enum": [null, "clinical_neurologist", "medical_student", "consensus_2reviewers", "consensus_3+reviewers"],
+      "description": "Reviewer role for privacy; null in v0.1.0"
+    },
+    "ontology_links": {
+      "type": "object",
+      "description": "Optional links to other ontologies (Mondo, SNOMED, etc.). Not required for HPO-only profile.",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "is_synthetic": {
+      "type": "boolean",
+      "description": "Must be true for any example committed to this public repository"
+    }
+  },
+  "additionalProperties": false
+}

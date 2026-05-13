@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+title: "clinical-state-annotation: schema and tooling for ontology-linked clinical state annotation"
+message: "If you use this infrastructure, please cite as below."
+type: software
+version: 0.1.0
+date-released: 2026-05-13
+authors:
+  - family-names: "Doi"
+    given-names: "Eisuke"
+    affiliation: "<affiliation>"
+keywords:
+  - clinical NLP
+  - HPO
+  - ontology
+  - annotation schema
+  - clinical state
+  - infrastructure
+  - undiagnosed disease
+  - atypical presentation
+abstract: >
+  Infrastructure for converting clinical case descriptions into ontology-linked
+  clinical state representations. v0.1.0 (Level 0) includes the annotation
+  schema, a synthetic example, and validation tooling. Source texts, surface
+  forms, spans, and identifiers are NOT redistributed.
+license: "MIT AND CC-BY-4.0"
+url: "https://github.com/clinical-state-infrastructure/clinical-state-annotation"
+repository-code: "https://github.com/clinical-state-infrastructure/clinical-state-annotation"
+preferred-citation:
+  type: software
+  title: "clinical-state-annotation v0.1.0"
+  year: 2026
+  doi: "<TBD if Zenodo enabled>"

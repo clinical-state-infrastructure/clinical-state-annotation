@@ -1,0 +1,77 @@
+{
+  "case_label": "synthetic_example_001",
+  "is_synthetic": true,
+  "note": "This example is completely fictional. It does NOT derive from any real publication or patient. It exists to demonstrate the schema.",
+  "annotations": [
+    {
+      "ord": 1,
+      "hpo_id": "HP:0003593",
+      "hpo_label": "age",
+      "category": "症例",
+      "subcategory": "demographics",
+      "presence": "+",
+      "tier": "AUTO-OK",
+      "confidence": 0.95,
+      "iteration": 0,
+      "review_status": "machine_only",
+      "reviewer_role": null,
+      "is_synthetic": true
+    },
+    {
+      "ord": 2,
+      "hpo_id": "HP:0002315",
+      "hpo_label": "Headache",
+      "category": "主訴",
+      "subcategory": "symptom",
+      "presence": "+",
+      "tier": "AUTO-OK",
+      "confidence": 0.92,
+      "iteration": 1,
+      "review_status": "machine_only",
+      "reviewer_role": null,
+      "is_synthetic": true
+    },
+    {
+      "ord": 3,
+      "hpo_id": "HP:0001945",
+      "hpo_label": "Fever",
+      "category": "現病歴",
+      "subcategory": "symptom",
+      "presence": "+",
+      "tier": "AUTO-OK",
+      "confidence": 0.94,
+      "iteration": 1,
+      "review_status": "machine_only",
+      "reviewer_role": null,
+      "is_synthetic": true
+    },
+    {
+      "ord": 4,
+      "hpo_id": "HP:0000822",
+      "hpo_label": "Hypertension",
+      "category": "既往歴",
+      "subcategory": "comorbidity",
+      "presence": "-",
+      "tier": "REVIEW",
+      "confidence": 0.72,
+      "iteration": 2,
+      "review_status": "machine_only",
+      "reviewer_role": null,
+      "is_synthetic": true
+    },
+    {
+      "ord": 5,
+      "hpo_id": "-",
+      "hpo_label": null,
+      "category": "経過",
+      "subcategory": "course",
+      "presence": "?",
+      "tier": "FLAG",
+      "confidence": 0.42,
+      "iteration": 5,
+      "review_status": "needs_review",
+      "reviewer_role": null,
+      "is_synthetic": true
+    }
+  ]
+}

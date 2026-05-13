@@ -1,0 +1,83 @@
+# ============================================================
+# clinical-state-annotation — .gitignore
+# Goal: prevent any accidental commit of source texts, surface
+# forms, secrets, or methodology code.
+# ============================================================
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+*.secret
+secrets/
+keys/
+
+# --- Surface / source data (MUST NEVER be committed) ---
+*.txt
+!annotation_schema/example_synthetic*.txt
+!docs/**/*.txt
+!README*.txt
+*.ann
+*_full.json
+*_with_surface.json
+*_with_text.json
+**/surface/
+**/source/
+**/original/
+**/raw_text/
+corpus/
+case_reports/
+
+# --- Methodology core (held private until paper publication) ---
+**/runner.py
+**/runner_extend.py
+**/complement.py
+**/extract.py
+**/chunking.py
+**/rlm_iter*.py
+**/extend_chain*.py
+methodology_core/
+
+# --- Patient / case identifiers ---
+**/doi_list*
+**/pmid_list*
+**/article_ids*
+**/case_index*
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+env/
+ENV/
+
+# --- Test cache ---
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Large binary outputs ---
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.tar.gz
+*.zip
+!docs/**/*.png
