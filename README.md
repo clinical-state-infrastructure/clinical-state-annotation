@@ -75,6 +75,14 @@ python scripts/validate_schema.py annotation_schema/example_synthetic.json
 python scripts/summarize_annotations.py annotation_schema/example_synthetic.json
 pytest tests/
 ```
+### License
+
+This repository is dual-licensed:
+
+- Code, including files under `scripts/`, `tests/`, and `*.py`: MIT License.
+- Schema, documentation, synthetic examples, Markdown files, and `CITATION.cff`: Creative Commons Attribution 4.0 International (CC-BY-4.0).
+
+See [`LICENSE`](./LICENSE) and [`DATA_LICENSE.md`](./DATA_LICENSE.md) for details.
 
 ### Citation
 
