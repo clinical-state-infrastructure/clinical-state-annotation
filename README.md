@@ -10,9 +10,6 @@
 > **source texts and surface forms are not redistributed**.
 
 ---
-
-## 🇺🇸 English (concise)
-
 ### What this repository is
 
 This repository provides the **schema, validation, and policy infrastructure**
@@ -91,9 +88,6 @@ See [`CONTACT.md`](./CONTACT.md).
 - This work was supported by JSPS KAKENHI Grant Number JP22K12253.
 
 ---
-
-## 🇯🇵 日本語 (詳細)
-
 ### 本リポジトリの目的
 
 本リポジトリは、症例報告等の臨床記述を、HPO 等のオントロジーに紐付けた
