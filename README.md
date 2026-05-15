@@ -87,6 +87,9 @@ See [`CITATION.cff`](./CITATION.cff).
 
 See [`CONTACT.md`](./CONTACT.md).
 
+### Acknowledgements
+- This work was supported by JSPS KAKENHI Grant Number JP22K12253.
+
 ---
 
 ## 🇯🇵 日本語 (詳細)
@@ -185,3 +188,4 @@ RLM annotation pipeline の core source は本リポジトリには含めませ�
 
 - 創発的研究支援事業 (JST FOREST) 申請に関連した基盤整備として開始
 - HPO project, Examining-HPO-by-organ, ogishima/HPO-japanese
+- 本研究はJSPS科研費 JP22K12253 の助成を受けたものです
