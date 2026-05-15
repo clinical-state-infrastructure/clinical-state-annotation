@@ -5,9 +5,9 @@ type: software
 version: 0.1.0
 date-released: 2026-05-13
 authors:
-  - family-names: "Doi"
+  - family-names: "Dohi"
     given-names: "Eisuke"
-    affiliation: "<affiliation>"
+    affiliation: "National Center of Neurology and Psychiatry"
 keywords:
   - clinical NLP
   - HPO
@@ -29,4 +29,3 @@ preferred-citation:
   type: software
   title: "clinical-state-annotation v0.1.0"
   year: 2026
-  doi: "<TBD if Zenodo enabled>"
